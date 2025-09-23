@@ -1,0 +1,58 @@
+package ScannerClass.java;
+
+	import java.util.Stack;
+
+	public class Stackexample {
+
+	    private Stack<Integer> stack;
+
+	    // Constructor
+	    public Stackexample() {
+	        stack = new Stack<>();
+	    }
+
+	    // a. Push element onto the stack
+	    public void pushElement(int element) {
+	        stack.push(element);
+	        System.out.println(element + " pushed onto stack.");
+	    }
+
+	    // b. Pop element from the stack
+	    public void popElement() {
+	        if (!stack.isEmpty()) {
+	            int popped = stack.pop();
+	            System.out.println(popped + " popped from stack.");
+	        } else {
+	            System.out.println("Stack is empty, cannot pop.");
+	        }
+	    }
+
+	    // c. Check if stack is empty
+	    public void checkIfEmpty() {
+	        if (stack.isEmpty()) {
+	            System.out.println("Stack is empty.");
+	        } else {
+	            System.out.println("Stack is not empty.");
+	        }
+	    }
+
+	    // Main method to test functionalities
+	    public static void main(String[] args) {
+	        Stackexample myStack = new Stackexample();
+
+	        myStack.checkIfEmpty();  
+	        myStack.pushElement(10);
+	        myStack.pushElement(20);
+	        myStack.pushElement(30);
+
+	        myStack.checkIfEmpty();  
+	        myStack.popElement();    
+	        myStack.popElement();    
+	        myStack.popElement();    
+	        myStack.popElement();    
+	        myStack.checkIfEmpty();  
+	    }
+	}
+
+
+
